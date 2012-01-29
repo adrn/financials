@@ -27,10 +27,11 @@ import datetime
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
+projectRoot = os.path.join(os.path.expanduser("~/"), "projects", "financials")
 stocks = ["C", "AAPL", "MSFT"]
 options = "sndl1yrvjkm"
 names = ["s","n","d","l1","y","r","v","j","k","m"]
-csvRoot = "csv_files"
+csvRoot = os.path.join(projectRoot,"csv_files")
 
 url = "http://finance.yahoo.com/d/quotes.csv?s={0}&f={1}".format("+".join(stocks), options)
 
