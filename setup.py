@@ -11,6 +11,9 @@ if not os.path.exists("csv_files"):
     os.mkdir("csv_files")
 
 homeBin = os.path.join(os.path.expanduser("~/"), "bin")
+if not os.path.exists(os.path.join(homeBin)):
+    os.mkdir(homeBin)
+
 if not os.path.exists(os.path.join(homeBin, "getCSV")):
     os.link("getCSV.py", os.path.join(homeBin, "getCSV"))
 
